@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The 2026 AI Blueprint for Jensen Financial Planning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        :root {
+            --bg: #fafafa;
+            --surface: #ffffff;
+            --text-main: #111827;
+            --text-muted: #4b5563;
+            --primary: #0f172a;
+            --accent-blue: #2563eb;
+            --accent-green: #059669;
+            --accent-amber: #d97706;
+            --border: #e5e7eb;
+            --radius-lg: 16px;
+            --radius-md: 8px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--bg);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* Hero Header */
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 80px 20px 60px;
+            text-align: center;
+            border-bottom: 4px solid var(--accent-blue);
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-label {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.1);
+            color: #93c5fd;
+            padding: 6px 16px;
+            border-radius: 100px;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+
+        h1 {
+            font-size: 42px;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        h1 span {
+            color: #93c5fd;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: #9ca3af;
+            max-width: 600px;
+            margin: 0 auto;
+            font-weight: 400;
+        }
+
+        /* Content Sections */
+        main {
+            padding: 60px 0 100px;
+        }
+
+        section {
+            margin-bottom: 60px;
+            background: var(--surface);
+            padding: 48px;
+            border-radius: var(--radius-lg);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+            border: 1px solid var(--border);
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 32px 0 12px;
+            color: var(--primary);
+        }
+
+        p {
+            margin-bottom: 16px;
+            font-size: 16px;
+            color: var(--text-muted);
+        }
+
+        /* Data Callouts */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 32px 0;
+        }
+
+        .stat-card {
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: 24px;
+            text-align: center;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 800;
+            color: var(--accent-blue);
+            margin-bottom: 8px;
+            line-height: 1;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* The Rule */
+        .golden-rule {
+            background: #eff6ff;
+            border-left: 4px solid var(--accent-blue);
+            padding: 24px;
+            border-radius: 0 var(--radius-md) var(--radius-md) 0;
+            margin: 32px 0;
+        }
+
+        .golden-rule h4 {
+            color: var(--accent-blue);
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .golden-rule p {
+            color: #1e3a8a;
+            font-size: 18px;
+            font-weight: 500;
+            margin: 0;
+        }
+
+        /* Implementation Plan */
+        .timeline {
+            margin-top: 32px;
+        }
+
+        .timeline-step {
+            display: grid;
+            grid-template-columns: 120px 1fr;
+            gap: 24px;
+            margin-bottom: 24px;
+            padding-bottom: 24px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .timeline-step:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .step-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 13px;
+            font-weight: 600;
+            color: var(--accent-green);
+            padding-top: 4px;
+        }
+
+        .step-content h4 {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+
+        .step-content p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        /* Tool Stack */
+        .tool-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 16px;
+            margin-top: 24px;
+        }
+
+        .tool-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            padding: 20px;
+            background: #fff;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02);
+        }
+
+        .tool-icon {
+            font-size: 24px;
+            background: #f1f5f9;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 12px;
+            flex-shrink: 0;
+        }
+
+        .tool-detail h4 {
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: var(--primary);
+        }
+
+        .tool-detail p {
+            font-size: 13px;
+            margin: 0;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+            background: white;
+            border-top: 1px solid var(--border);
+        }
+
+        .author-block {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .author-avatar {
+            width: 40px;
+            height: 40px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 14px;
+        }
+
+        .author-text {
+            text-align: left;
+        }
+
+        .author-text strong {
+            display: block;
+            color: var(--primary);
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            section {
+                padding: 32px 24px;
+            }
+
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline-step {
+                grid-template-columns: 1fr;
+                gap: 8px;
+            }
+
+            .step-time {
+                padding-top: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <div class="header-label">Free Resource · JFP Exclusive</div>
+            <h1>The 2026 AI Blueprint for <span>Jensen Financial Planning</span></h1>
+            <p class="subtitle">A step-by-step framework to reduce your SOA preparation time by 75%, increase firm
+                capacity, and maintain rigorous ASIC compliance — without hiring more staff.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Section 1: The Bottleneck -->
+        <section>
+            <h2>📉 The Collins Street Bottleneck</h2>
+            <p>JFP is highly successful. You have a trusted 30-year legacy, a pioneering fee-for-service model, and a
+                high-net-worth client base. But your growth is mathematically capped by a single bottleneck.</p>
+            <p>With a 5-person team managing complex multi-entity structures (SMSFs, trusts, personal accounts), the
+                manual documentation payload is overwhelming. The core bottleneck is the Statement of Advice.</p>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-value">6-8 Hours</div>
+                    <div class="stat-label">Current Time per SOA</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-value">
+                        < 2 Hours</div>
+                            <div class="stat-label">AI-Enhanced Target</div>
+                    </div>
+                </div>
+
+                <p>Currently, top-tier boutique firms in Perth and regional NSW are already using tailored AI to cut
+                    their document preparation time by up to 72% (validated by EY). Melbourne boutiques are lagging.
+                    <strong>This blueprint is how JFP can be the first to modernise on Collins St.</strong></p>
+        </section>
+
+        <!-- Section 2: The Core Principle -->
+        <section>
+            <h2>⚖️ The Compliance-First Framework</h2>
+            <p>The primary concern for any established firm adopting AI is compliance (ASIC Report 798, Best Interests
+                Duty, Privacy Act). This blueprint relies on one non-negotiable principle:</p>
+
+            <div class="golden-rule">
+                <h4>The Golden Rule</h4>
+                <p>"AI Assists. Humans Advise. No system makes a recommendation on behalf of a client without explicit
+                    adviser review and approval."</p>
+            </div>
+
+            <p>By keeping AI as a "Co-Pilot" rather than an "Autopilot," you retain the 30 years of fiduciary trust
+                you've built, while stripping away the administrative drag.</p>
+        </section>
+
+        <!-- Section 3: The Tech Stack -->
+        <section>
+            <h2>🛠️ The Recommended Tech Stack</h2>
+            <p>You don't need a single, massive enterprise software replacement. You need targeted integrations that
+                connect your existing systems.</p>
+
+            <div class="tool-grid">
+                <div class="tool-item">
+                    <div class="tool-icon">📗</div>
+                    <div class="tool-detail">
+                        <h4>Xplan (Core Database)</h4>
+                        <p>Keep Xplan as your single source of truth. We just need to optimise the data fields so AI can
+                            pull from it cleanly without manual re-entry.</p>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">🎤</div>
+                    <div class="tool-detail">
+                        <h4>PlannerPal (Audio Intelligence)</h4>
+                        <p>Stop taking manual meeting notes. PlannerPal sits in the meeting, transcribes the audio,
+                            extracts client goals, and logs compliance notes directly to Xplan.</p>
+                    </div>
+                </div>
+                <div class="tool-item">
+                    <div class="tool-icon">🤖</div>
+                    <div class="tool-detail">
+                        <h4>FAYBL / Custom LLM (Draft Generation)</h4>
+                        <p>Use financial-services-specific AI to merge the meeting transcript with the Xplan data to
+                            generate a compliant, fully-formatted SOA draft in 15 minutes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The 90-Day Implementation -->
+        <section>
+            <h2>📅 The 90-Day DIY Implementation Plan</h2>
+            <p>If you want to implement this internally over the next quarter, here is exactly how you should sequence
+                the rollout to minimize disruption to Chris and Karen.</p>
+
+            <div class="timeline">
+                <div class="timeline-step">
+                    <div class="step-time">Days 1-14</div>
+                    <div class="step-content">
+                        <h4>The Data Audit</h4>
+                        <p>Review how data goes into Xplan. If the data is messy, the AI output will be messy.
+                            Standardise how Rachel, George, and Annie input entity structures and balances.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-time">Days 15-30</div>
+                    <div class="step-content">
+                        <h4>Deploy Meeting AI</h4>
+                        <p>Turn on PlannerPal for 5 non-critical client meetings. Let Chris and Karen experience walking
+                            out of a meeting with the File Note already written and saved to the client file.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-time">Days 31-60</div>
+                    <div class="step-content">
+                        <h4>Automate File Management</h4>
+                        <p>Map the manual tasks George and Annie are doing. Set up robotic process automation (RPA) to
+                            move files, update records, and flag missing compliance documents automatically.</p>
+                    </div>
+                </div>
+                <div class="timeline-step">
+                    <div class="step-time">Days 61-90</div>
+                    <div class="step-content">
+                        <h4>The AI SOA Pilot</h4>
+                        <p>Run your first SOA through an AI generator. Let the system pull the data and draft the
+                            document. Karen spends 2 hours reviewing, editing, and blessing the advice, saving ~5 hours
+                            on that single document.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: The Gift -->
+        <section style="background: #0f172a; color: white; border-color: #1e293b;">
+            <h2 style="color: white;">Why am I giving you this?</h2>
+            <p style="color: #94a3b8;">You posted a role looking for someone to help JFP step into the future. Instead
+                of sending a standard CV and telling you what I can do, I wanted to *show* you exactly how I think.</p>
+            <p style="color: #94a3b8;">This blueprint is yours to execute. You can hand it to your team tomorrow and
+                start the journey.</p>
+            <p style="color: #94a3b8;">But if you'd rather have someone build, integrate, and manage this entire process
+                for you—while Chris and Karen stick to what they do best: advising clients—I've built a working
+                prototype of the software. I'd love 30 minutes to show it to you.</p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Prepared exclusively for Jensen Financial Planning</p>
+        <div class="author-block">
+            <div class="author-avatar">AG</div>
+            <div class="author-text">
+                <strong>AntiGravity AI</strong>
+                <span>Strategic Implementation</span>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
